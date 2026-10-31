@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "habit-tracker-expo",
+    "slug": "habit-tracker-expo",
+    "scheme": "habittracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O Habit Tracker usa a sua localização para registrar onde o treino aconteceu. O ponto fica salvo só no aparelho.",
+        "NSCameraUsageDescription": "O Habit Tracker usa a câmera para você registrar a foto do seu progresso. A foto fica só no aparelho.",
+        "NSMotionUsageDescription": "O Habit Tracker usa os sensores de movimento para detectar chacoalhada e medir a inclinação do aparelho."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "O Habit Tracker usa a sua localização para registrar onde o treino aconteceu."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "O Habit Tracker usa a câmera para você registrar a foto do seu progresso.",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-sensors",
+      "expo-router",
+      "expo-notifications",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O Habit Tracker acessa suas fotos para você anexar uma imagem de progresso ao seu hábito.",
+          "cameraPermission": "O Habit Tracker usa a câmera para você registrar a foto do seu hábito.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-font"
+    ]
+  }
+}
